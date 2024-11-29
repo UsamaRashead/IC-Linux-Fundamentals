@@ -223,11 +223,55 @@ usamarashead@ur-ubuntu:~$
 ### Package installation
 #### Update repo cache using apt/apt-get
 ```
-
+usamarashead@ur-ubuntu:~$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [673 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main i386 Packages [337 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [131 kB]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [7,180 B]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [719 kB]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [51.9 kB]
+Get:13 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/universe i386 Packages [442 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [310 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [11.7 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Fetched 3,063 kB in 15s (206 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+51 packages can be upgraded. Run 'apt list --upgradable' to see them.
 ```
 #### Install a package named tree
 ```
-
+usamarashead@ur-ubuntu:~$ sudo apt-get install tree
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  mysql-client-8.0 mysql-client-core-8.0 mysql-common
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  tree
+0 upgraded, 1 newly installed, 0 to remove and 51 not upgraded.
+Need to get 47.1 kB of archives.
+After this operation, 111 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble/universe amd64 tree amd64 2.1.1-2ubuntu3 [47.1 kB]
+Fetched 47.1 kB in 2s (29.9 kB/s)
+Selecting previously unselected package tree.
+(Reading database ... 213110 files and directories currently installed.)
+Preparing to unpack .../tree_2.1.1-2ubuntu3_amd64.deb ...
+Unpacking tree (2.1.1-2ubuntu3) ...
+Setting up tree (2.1.1-2ubuntu3) ...
+Processing triggers for man-db (2.12.0-4build2) ...
 ```
 #### Install gcloud CLI tool using apt ( Follow instructions from here: https://cloud.google.com/sdk/docs/install#deb )
 ```
