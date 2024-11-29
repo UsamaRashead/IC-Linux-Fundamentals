@@ -37,3 +37,42 @@ usamarashead@ur-ubuntu:/var/log$ which $SHELL
 usamarashead@ur-ubuntu:/var/log$ echo $0
 -bash
 ```
+
+### File and Directory Operations
+#### Create a directory named linux_fundamentals in your home directory.
+```
+usamarashead@ur-ubuntu:~$ mkdir linux_fundamentals
+```
+
+#### Inside linux_fundamentals, create a subdirectory named scripts.
+```
+usamarashead@ur-ubuntu:~/linux_fundamentals$ mkdir scripts
+```
+#### Create an empty file named example.txt inside the linux_fundamentals directory.
+```
+usamarashead@ur-ubuntu:~/linux_fundamentals$ touch example.txt
+```
+#### Copy example.txt to the scripts directory.
+```
+usamarashead@ur-ubuntu:~/linux_fundamentals$ cp example.txt ~/linux_fundamentals/scripts/
+```
+#### Move example.txt from linux_fundamentals to linux_fundamentals/backup.
+```
+usamarashead@ur-ubuntu:~/linux_fundamentals$ mkdir backup
+usamarashead@ur-ubuntu:~/linux_fundamentals$ mv ~/linux_fundamentals/example.txt ~/linux_fundamentals/backup/
+usamarashead@ur-ubuntu:~/linux_fundamentals$ ls ~/linux_fundamentals/backup/
+example.txt
+```
+
+### Permissions
+
+#### Change the permissions of example.txt to read and write for the owner, and read-only for the group and others.
+```
+usamarashead@ur-ubuntu:~/linux_fundamentals/backup$ chmod 644 example.txt
+```
+#### Verify the permission changes using ls -l
+```
+usamarashead@ur-ubuntu:~/linux_fundamentals/backup$ ls -l
+total 0
+-rw-r--r-- 1 usamarashead usamarashead 0 Nov 29 20:58 example.txt
+```
