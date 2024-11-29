@@ -136,4 +136,44 @@ usamarashead@ur-ubuntu:~$ ls -l ~/project/ | grep report.txt
 -rw-r--r-- 1 usamarashead usamarashead 0 Nov 29 21:18 report.txt
 ```
 
+### User add/modify
+#### Create a new user named developer.
+```
+usamarashead@ur-ubuntu:~$ sudo useradd developer
+```
+#### Set the home directory of the user developer to /home/developer_home.
+```
+usamarashead@ur-ubuntu:~$ sudo usermod -d /home/developer_home developer
+```
+#### Assign the shell /bin/sh to the user developer.
+```
+usamarashead@ur-ubuntu:~$ sudo chsh -s /bin/sh developer
+```
+#### Verify the new user's information.
+```
+usamarashead@ur-ubuntu:~$ cat /etc/passwd | grep developer
+developer:x:1003:1003::/home/developer_home:/bin/sh
+```
+#### Change the username of the user developer to devuser.
+```
+usamarashead@ur-ubuntu:~$ sudo usermod -l devuser developer
+```
+#### Add devuser to a group named devgroup.
+```
+usamarashead@ur-ubuntu:~$ sudo groupadd devgroup
+usamarashead@ur-ubuntu:~$ sudo usermod -a -G devgroup devuser
+```
+#### Set the password of devuser to devpass. ( hint: use passwd command. Run passwd --help to see available options)
+```
+usamarashead@ur-ubuntu:~$ sudo passwd devuser
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+passwd: password updated successfully
+usamarashead@ur-ubuntu:~$
+```
+#### Verify the changes made to the user.
+```
+
+```
 
