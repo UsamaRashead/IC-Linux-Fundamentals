@@ -109,7 +109,31 @@ drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Templates
 drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Videos
 ```
 
-
-
+### Ownership
+#### Create a directory named project in your home directory.
+```
+usamarashead@ur-ubuntu:~$ mkdir project
+```
+#### Create a file named report.txt inside the project directory.
+```
+usamarashead@ur-ubuntu:~$ touch ~/project/report.txt
+usamarashead@ur-ubuntu:~$ ls ~/project/
+report.txt
+```
+#### Set the permissions of report.txt to read and write for the owner, and read-only for the group and others.
+```
+usamarashead@ur-ubuntu:~/project$ chmod 644 report.txt
+```
+#### Set the permissions of the project directory to read, write, and execute for the owner, and read and execute for the group and others
+```
+usamarashead@ur-ubuntu:~/project$ chmod 755 ~/project/
+```
+#### Verify the changes using appropriate commands.
+```
+usamarashead@ur-ubuntu:~$ ls -l | grep project
+drwxr-xr-x  2 usamarashead usamarashead 4096 Nov 29 21:18 project
+usamarashead@ur-ubuntu:~$ ls -l ~/project/ | grep report.txt
+-rw-r--r-- 1 usamarashead usamarashead 0 Nov 29 21:18 report.txt
+```
 
 
