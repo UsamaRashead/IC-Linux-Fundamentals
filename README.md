@@ -180,11 +180,11 @@ usamarashead@ur-ubuntu:~$
 ### Hard/Soft Link
 #### Create a file named original.txt in your home directory.
 ```
-
+usamarashead@ur-ubuntu:~$ touch original.txt
 ```
 #### Create a symbolic link named softlink.txt pointing to original.txt.
 ```
-
+usamarashead@ur-ubuntu:~$ ln -s original.txt softlink.txt
 ```
 #### Verify the symbolic link and ensure it points to the correct file.
 ```
