@@ -188,8 +188,29 @@ usamarashead@ur-ubuntu:~$ ln -s original.txt softlink.txt
 ```
 #### Verify the symbolic link and ensure it points to the correct file.
 ```
-
+usamarashead@ur-ubuntu:~$ ls -l
+total 64
+drwxrwxr-x  3 usamarashead usamarashead 4096 Oct 23 00:23 candy-bucket
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Desktop
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Documents
+drwxr-xr-x  2 usamarashead usamarashead 4096 Nov  4 12:57 Downloads
+-rw-rw-r--  1 student      student         0 Nov 29 21:09 example.txt
+drwxrwxr-x 10 usamarashead usamarashead 4096 Nov  9 20:34 Git_Learn_Anis
+drwxrwxrwx  3 usamarashead usamarashead 4096 Nov 28 20:15 ic-bash
+drwxrwxr-x  5 usamarashead usamarashead 4096 Nov 26 13:49 ic-linux-os
+drwxrwxr-x  3 usamarashead usamarashead 4096 Oct 25 19:47 Interactive_Cares
+drwxrwxr-x  4 usamarashead usamarashead 4096 Nov 29 20:59 linux_fundamentals
+drwxr-xr-x  3 usamarashead usamarashead 4096 Nov 13 21:43 Music
+-rw-rw-r--  1 usamarashead usamarashead    0 Nov 30 12:48 original.txt
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Pictures
+drwxr-xr-x  2 usamarashead usamarashead 4096 Nov 29 21:18 project
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Public
+drwx------  6 usamarashead usamarashead 4096 Nov  2 13:56 snap
+lrwxrwxrwx  1 usamarashead usamarashead   12 Nov 30 12:48 softlink.txt -> original.txt
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Templates
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Videos
 ```
+<img> ./screenshots/01. softlink.png </img>
 #### Delete the original file original.txt and observe the status of the symbolic link.
 ```
 
