@@ -210,6 +210,7 @@ lrwxrwxrwx  1 usamarashead usamarashead   12 Nov 30 12:48 softlink.txt -> origin
 drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Templates
 drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Videos
 ```
+![image](./screenshots/01. softlink.png)
 <img> ./screenshots/01. softlink.png </img>
 #### Delete the original file original.txt and observe the status of the symbolic link.
 ```
