@@ -241,29 +241,55 @@ drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Videos
 
 #### Create a file named datafile.txt in your home directory.
 ```
-
+usamarashead@ur-ubuntu:~$ touch datafile.txt
 ```
 #### Create a hard link named hardlink.txt pointing to datafile.txt.
 ```
-
+usamarashead@ur-ubuntu:~$ ln datafile.txt  hardlink.txt
 ```
 #### Verify the hard link and ensure it correctly points to the file.
 ```
-
+usamarashead@ur-ubuntu:~$ ls -i datafile.txt
+1972829 datafile.txt
+usamarashead@ur-ubuntu:~$ ls -i hardlink.txt
+1972829 hardlink.txt
 ```
 #### Check the inode of both datafile.txt and hardlink.txt
 ```
-
+usamarashead@ur-ubuntu:~$ ls -i datafile.txt
+1972829 datafile.txt
+usamarashead@ur-ubuntu:~$ ls -i hardlink.txt
+1972829 hardlink.txt
 ```
 #### Delete the original file datafile.txt and observe the status of the hard link.
 ```
-
+usamarashead@ur-ubuntu:~$ rm datafile.txt
+usamarashead@ur-ubuntu:~$ ls -l
+total 64
+drwxrwxr-x  3 usamarashead usamarashead 4096 Oct 23 00:23 candy-bucket
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Desktop
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Documents
+drwxr-xr-x  2 usamarashead usamarashead 4096 Nov  4 12:57 Downloads
+-rw-rw-r--  1 student      student         0 Nov 29 21:09 example.txt
+drwxrwxr-x 10 usamarashead usamarashead 4096 Nov  9 20:34 Git_Learn_Anis
+-rw-rw-r--  1 usamarashead usamarashead    0 Nov 30 13:26 hardlink.txt
+drwxrwxrwx  3 usamarashead usamarashead 4096 Nov 28 20:15 ic-bash
+drwxrwxr-x  5 usamarashead usamarashead 4096 Nov 26 13:49 ic-linux-os
+drwxrwxr-x  3 usamarashead usamarashead 4096 Oct 25 19:47 Interactive_Cares
+drwxrwxr-x  4 usamarashead usamarashead 4096 Nov 29 20:59 linux_fundamentals
+drwxr-xr-x  3 usamarashead usamarashead 4096 Nov 13 21:43 Music
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Pictures
+drwxr-xr-x  2 usamarashead usamarashead 4096 Nov 29 21:18 project
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Public
+drwx------  6 usamarashead usamarashead 4096 Nov  2 13:56 snap
+lrwxrwxrwx  1 usamarashead usamarashead   12 Nov 30 12:48 softlink.txt -> original.txt
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Templates
+drwxr-xr-x  2 usamarashead usamarashead 4096 Oct 21 18:37 Videos
 ```
 #### Find all .txt files in your home directory. ( use find command. Run find --help for usage)
 ```
-
+usamarashead@ur-ubuntu:~$ find  -type f -name '*.txt'
 ```
-
 
 ### Package installation
 #### Update repo cache using apt/apt-get
@@ -295,6 +321,8 @@ Building dependency tree... Done
 Reading state information... Done
 51 packages can be upgraded. Run 'apt list --upgradable' to see them.
 ```
+<img width="700" alt="01  softlink" src="screenshots/03. package update.png">
+
 #### Install a package named tree
 ```
 usamarashead@ur-ubuntu:~$ sudo apt-get install tree
@@ -318,6 +346,8 @@ Unpacking tree (2.1.1-2ubuntu3) ...
 Setting up tree (2.1.1-2ubuntu3) ...
 Processing triggers for man-db (2.12.0-4build2) ...
 ```
+<img width="700" alt="01  softlink" src="screenshots/04. package install.png">
+
 #### Install gcloud CLI tool using apt ( Follow instructions from here: https://cloud.google.com/sdk/docs/install#deb )
 ```
 
