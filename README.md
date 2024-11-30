@@ -350,6 +350,6 @@ Processing triggers for man-db (2.12.0-4build2) ...
 
 #### Install gcloud CLI tool using apt ( Follow instructions from here: https://cloud.google.com/sdk/docs/install#deb )
 ```
-
+usamarashead@ur-ubuntu:~$ sudo apt-get update && sudo apt-get install google-cloud-cli
 ```
-
+<img width="700" alt="01  softlink" src="screenshots/05. install Gcloud.png">
